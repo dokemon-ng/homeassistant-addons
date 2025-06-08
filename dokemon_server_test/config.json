@@ -16,7 +16,7 @@
   "init": false,
   "map": ["ssl"],
   "ports": {
-    "9090/tcp": null
+    "9090/tcp": 9090
   },
   "ports_description": {
     "9090/tcp": "Dokémon Port"

@@ -10,8 +10,8 @@
   "boot": "auto",
   "init": false,
   "ports": {"9090/tcp": 9090},
-  "volumes": {"data": "/data", "docker sock": "/var/run/docker.sock"},
+  "volumes": {"data": "/data", "/var/run/docker.sock": "/var/run/docker.sock"},
   "options": {},
   "schema": {},
-  "host_network": false
+  "host_network": true
 }

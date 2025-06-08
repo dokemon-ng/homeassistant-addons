@@ -13,7 +13,7 @@
     "docker_sock": "/var/run/docker.sock"
   },
   "options": {
-    "server_url": "http://192.168.2.203:9090",
+    "server_url": "",
     "token": ""
   },
   "schema": {

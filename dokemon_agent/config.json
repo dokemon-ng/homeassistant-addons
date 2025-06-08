@@ -4,7 +4,7 @@
   "slug": "dokemon_agent",
   "description": "Connects to a Dokemon server",
   "arch": ["amd64", "armv7", "aarch64"],
-  "image": "javastraat/dokemon-agent:latest",
+  "image": "javastraat/dokemon-agent",
   "startup": "application",
   "boot": "auto",
   "init": false,

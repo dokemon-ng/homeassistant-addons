@@ -1,6 +1,6 @@
 {
   "name": "Dokemon Server",
-  "version": "1.6.0b",
+  "version": "latest",
   "slug": "dokemon_server",
   "description": "Dokemon Server",
   "arch": ["amd64", "armv7", "aarch64"],

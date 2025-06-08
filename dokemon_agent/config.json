@@ -1,9 +1,8 @@
 {
-  "name": "Dokémon Agent",
+  "name": "Dokemon Agent",
   "version": "latest",
   "slug": "dokemon_agent",
-  "description": "Connects to a Dokémon server",
-  "url": "https://github.com/dokemon-ng/homeassistant-addons",
+  "description": "Connects to a Dokemon server",
   "arch": ["amd64", "armv7", "aarch64"],
   "image": "javastraat/dokemon-agent",
   "startup": "application",
@@ -18,18 +17,8 @@
     "token": "your-token-here"
   },
   "schema": {
-    "server_url": {
-      "name": "Server URL",
-      "description": "URL of Dokemon server",
-      "required": true,
-      "type": "str"
-    },
-    "token": {
-      "name": "Access Token",
-      "description": "Authentication token",
-      "required": true,
-      "type": "str"
-    }
+    "server_url": "str",
+    "token": "str"
   },
   "environment": {
     "SERVER_URL": "$server_url",

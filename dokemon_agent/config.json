@@ -1,6 +1,6 @@
 {
   "name": "Dokemon Agent",
-  "version": "1.6.0b",
+  "version": "latest",
   "slug": "dokemon_agent",
   "description": "Connects to a Dokemon server",
   "arch": ["amd64", "armv7", "aarch64"],

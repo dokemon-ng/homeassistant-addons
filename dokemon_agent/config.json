@@ -3,6 +3,7 @@
   "version": "latest",
   "slug": "dokemon_agent",
   "description": "Connects to a Dokémon server",
+  "url": "https://github.com/dokemon-ng/homeassistant-addons",
   "arch": ["amd64", "armv7", "aarch64"],
   "image": "javastraat/dokemon-agent",
   "startup": "application",
@@ -13,16 +14,16 @@
     "docker_sock": "/var/run/docker.sock"
   },
   "options": {
-    "server_url": "http://your-server-ip:9090",
-    "token": "your-token-here"
+    "SERVER_URL": "http://your-server-ip:9090",
+    "TOKEN": "your-token-here"
   },
   "schema": {
-    "server_url": "str",
-    "token": "str"
+    "SERVER_URL": "str",
+    "TOKEN": "str"
   },
   "environment": {
-    "SERVER_URL": "$server_url",
-    "TOKEN": "$token"
+    "SERVER_URL": "$SERVER_URL",
+    "TOKEN": "$TOKEN"
   }
 }
 

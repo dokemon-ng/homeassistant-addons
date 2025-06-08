@@ -1,0 +1,15 @@
+name: Dokemon Server
+description: Dokemon server for Home Assistant
+version: "1.6.0b"
+slug: dokemon_server
+arch:
+  - amd64
+  - armv7
+  - aarch64
+image: javastraat/dokemon-server
+ports:
+  "9080/tcp": 9090
+options:
+  env_vars: {}
+schema:
+  env_vars: "str?"

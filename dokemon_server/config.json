@@ -3,6 +3,7 @@
   "version": "latest",
   "slug": "dokemon_server",
   "description": "Dokémon Server",
+  "url": "https://github.com/dokemon-ng/",
   "arch": ["amd64", "armv7", "aarch64"],
   "image": "javastraat/dokemon-server",
   "startup": "application",

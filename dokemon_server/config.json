@@ -1,10 +1,10 @@
 {
   "name": "Dokemon Server",
-  "version": "1.0.0",
+  "version": "1.6.0b",
   "slug": "dokemon_server",
   "description": "Dokemon Server",
   "arch": ["amd64", "armv7", "aarch64"],
-  "image": "javastraat/dokemon-server",
+  "image": "javastraat/dokemon-server:latest",
   "startup": "application",
   "boot": "auto",
   "init": false,

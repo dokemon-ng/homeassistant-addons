@@ -22,13 +22,13 @@
       "name": "Server URL",
       "description": "URL of Dokemon server",
       "required": true,
-      "type": "string"
+      "type": "str"
     },
     "token": {
       "name": "Access Token",
       "description": "Authentication token",
       "required": true,
-      "type": "string"
+      "type": "str"
     }
   },
   "environment": {

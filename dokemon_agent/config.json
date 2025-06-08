@@ -31,5 +31,8 @@
       "type": "string"
     }
   },
-  "host_network": true,
+  "environment": {
+    "SERVER_URL": "$server_url",
+    "TOKEN": "$token"
+  }
 }

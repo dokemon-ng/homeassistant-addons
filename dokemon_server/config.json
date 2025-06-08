@@ -2,7 +2,7 @@
   "name": "Dokémon Server",
   "version": "latest",
   "slug": "dokemon_server",
-  "description": "Dokémon Server",
+  "description": "Dokémon is a friendly GUI for managing Docker Containers.",
   "url": "https://github.com/dokemon-ng/",
   "arch": ["amd64", "armv7", "aarch64"],
   "image": "javastraat/dokemon-server",

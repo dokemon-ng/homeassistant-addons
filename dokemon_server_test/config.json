@@ -5,8 +5,6 @@
   "description": "Dokémon is a friendly GUI for managing Docker Containers.",
   "url": "https://github.com/dokemon-ng/",
   "webui": "http://[HOST]:[PORT:9090]/dokemon",
-  "privileged": "NET_ADMIN",
-  "full_access": true,
   "arch": ["amd64", "armv7", "aarch64"],
   "image": "javastraat/dokemon-server",
   "startup": "application",

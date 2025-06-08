@@ -19,6 +19,5 @@
   "stdin": true,
   "docker_api": true,
   "hassio_role": "manager",
-  "apparmor": false,
   "host_dbus": true
 }

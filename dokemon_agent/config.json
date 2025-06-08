@@ -24,9 +24,5 @@
   "environment": {
     "SERVER_URL": "$server_url",
     "TOKEN": "$token"
-  },
-  "host_network": true,
-  "homeassistant_api": true,
-  "hassio_api": false,
-  "stdin": true,
+  }
 }

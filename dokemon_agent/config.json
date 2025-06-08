@@ -17,11 +17,17 @@
     "token": "your-token-here"
   },
   "schema": {
-    "server_url": "str",
-    "token": "str"
-  },
-  "environment": {
-    "SERVER_URL": "$server_url",
-    "TOKEN": "$token"
+    "server_url": {
+      "name": "Server URL",
+      "description": "URL of Dokemon server",
+      "required": true,
+      "type": "string"
+    },
+    "token": {
+      "name": "Access Token",
+      "description": "Authentication token",
+      "required": true,
+      "type": "string"
+    }
   }
 }

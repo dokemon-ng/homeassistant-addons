@@ -1,24 +1,16 @@
-name: Dokemon Server
-description: A Dokemon game server for Home Assistant
-version: "1.0.0"
-slug: dokemon_server
-arch:
-  - amd64
-  - armv7
-  - aarch64
-image: javastraat/dokemon-server:latest
-startup: application  # Required (application, services, or system)
-boot: auto            # Required (auto, manual)
-init: false           # Required (true/false)
-ports:
-  "9090/tcp": 9090
-volumes:
-  data: /data
-  docker_sock: /var/run/docker.sock
-options:  # User-configurable options (optional)
-  env_vars: {}
-schema:  # Defines types for options (optional)
-  env_vars: "str?"
-host_network: false  # Set to true if your add-on needs host networking
-homeassistant_api: false  # Set to true if your add-on interacts with HA
-hassio_api: false  # Required if your add-on uses Supervisor API
+{
+  "name": "Dokemon Server",
+  "version": "1.0.0",
+  "slug": "dokemon_server",
+  "description": "Dokemon Server",
+  "arch": ["amd64", "armv7", "aarch64"],
+  "image": "javastraat/dokemon-server",
+  "startup": "application",
+  "boot": "auto",
+  "init": false,
+  "ports": {"9090/tcp": 9090},
+  "volumes": {"data": "/data", "docker_sock": "/var/run/docker.sock"},
+  "options": {},
+  "schema": {},
+  "host_network": false
+}

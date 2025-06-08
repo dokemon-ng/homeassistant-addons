@@ -1,8 +1,8 @@
 {
-  "name": "Dokemon Server",
+  "name": "Dokémon Server",
   "version": "latest",
   "slug": "dokemon_server",
-  "description": "Dokemon Server",
+  "description": "Dokémon Server",
   "arch": ["amd64", "armv7", "aarch64"],
   "image": "javastraat/dokemon-server",
   "startup": "application",

@@ -10,11 +10,13 @@
   "boot": "auto",
   "init": false,
   "ports": {"9090/tcp": 9090},
-  "volumes": {"data": "/data", "docker_sock": "/var/run/docker.sock", "/var/run/docker.sock":"/var/run/docker.sock"},
+  "volumes": {"data": "/data", "docker_sock": "/var/run/docker.sock"},
   "options": {},
   "schema": {},
   "host_network": true,
   "homeassistant_api": true,
   "hassio_api": false,
-  "stdin": true
+  "stdin": true,
+  "docker_api": "true"
+  
 }

@@ -1,14 +1,17 @@
 name: Dokemon Server
-description: Dokemon server for Home Assistant
-version: "1.6.0b"
+description: A Dokemon game server for Home Assistant
+version: "1.0.0"
 slug: dokemon_server
 arch:
   - amd64
   - armv7
   - aarch64
-image: javastraat/dokemon-server
+image: javastraat/dokemon-server:latest
 ports:
-  "9080/tcp": 9090
+  "9090/tcp": 9090
+volumes:
+  data: /root/config/dokemondata
+  docker_sock: /var/run/docker.sock
 options:
   env_vars: {}
 schema:

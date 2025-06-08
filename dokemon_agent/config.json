@@ -1,8 +1,9 @@
 {
-  "name": "Dokemon Agent",
+  "name": "Dokémon Agent",
   "version": "latest",
   "slug": "dokemon_agent",
-  "description": "Connects to a Dokemon server",
+  "description": "Connects to a Dokémon server",
+  "url": "https://github.com/dokemon-ng/homeassistant-addons",
   "arch": ["amd64", "armv7", "aarch64"],
   "image": "javastraat/dokemon-agent",
   "startup": "application",

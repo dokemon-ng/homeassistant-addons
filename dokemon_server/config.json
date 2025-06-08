@@ -4,7 +4,7 @@
   "slug": "dokemon_server",
   "description": "Dokemon Server",
   "arch": ["amd64", "armv7", "aarch64"],
-  "image": "javastraat/dokemon-server:latest",
+  "image": "javastraat/dokemon-server",
   "startup": "application",
   "boot": "auto",
   "init": false,

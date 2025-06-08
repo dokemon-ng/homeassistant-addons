@@ -2,13 +2,16 @@
   "name": "Dokemon Agent",
   "version": "1.0.0",
   "slug": "dokemon_agent",
-  "description": "Dokemon agent for connecting to a Dokemon server",
+  "description": "Connects to a Dokemon server",
   "arch": ["amd64", "armv7", "aarch64"],
   "image": "javastraat/dokemon-agent:latest",
   "startup": "application",
   "boot": "auto",
   "init": false,
-  "host_network": false,
+  "ports": {},
+  "volumes": {
+    "docker_sock": "/var/run/docker.sock"
+  },
   "options": {
     "server_url": "http://192.168.2.203:9090",
     "token": ""
@@ -16,13 +19,6 @@
   "schema": {
     "server_url": "str",
     "token": "str"
-  },
-  "map": ["config:rw"],
-  "ports": {
-    "9090/tcp": 9090
-  },
-  "volumes": {
-    "docker_sock": "/var/run/docker.sock"
   },
   "environment": {
     "SERVER_URL": "{{ options.server_url }}",

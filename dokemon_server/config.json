@@ -18,5 +18,4 @@
   "hassio_api": false,
   "stdin": true,
   "docker_api": "true"
-  
 }

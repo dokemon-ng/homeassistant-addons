@@ -20,8 +20,8 @@
     "server_url": "str",
     "token": "str"
   },
-  "environment": {
-    "SERVER_URL": "$SERVER_URL",
-    "TOKEN": "$TOKEN"
+  "env": {
+    "SERVER_URL": {"name": "SERVER_URL", "value": "{{ options.server_url }}"},
+    "TOKEN": {"name": "TOKEN", "value": "{{ options.token }}"}
   }
 }

@@ -1,87 +1,20 @@
----
-name: Dokémon Server
-version: latest
-slug: dokemon_server_test
-description: Dokémon is a friendly GUI for managing Docker Containers
-url: https://github.com/dokemon-ng/
-codenotary: albert@einstein.amsterdam
-image: javastraat/dokemon-server
-startup: application
-ingress: true
-ingress_port: 0
-ingress_stream: true
-init: false
-panel_icon: mdi:console
-panel_title: Terminal
-homeassistant: 0.92.0b2
-arch:
-  - aarch64
-  - amd64
-  - armv7
-ports:
-  22/tcp: 22
-ports_description:
-  22/tcp: SSH server port (make empty to disable)
-hassio_api: true
-hassio_role: manager
-services:
-  - mysql:want
-  - mqtt:want
-homeassistant_api: true
-host_network: true
-uart: true
-usb: true
-gpio: true
-audio: true
-apparmor: false
-host_dbus: true
-docker_api: true
-privileged:
-  - NET_ADMIN
-  - SYS_ADMIN
-  - SYS_RAWIO
-  - SYS_TIME
-  - SYS_NICE
-devices:
-  - /dev/mem
-map:
-  - addons:rw
-  - all_addon_configs:rw
-  - backup:rw
-  - homeassistant_config:rw
-  - media:rw
-  - share:rw
-  - ssl:rw
-journald: true
-options:
-  ssh:
-    username: hassio
-    password: ""
-    authorized_keys: []
-    sftp: false
-    compatibility_mode: false
-    allow_agent_forwarding: false
-    allow_remote_port_forwarding: false
-    allow_tcp_forwarding: false
-  zsh: true
-  share_sessions: false
-  packages: []
-  init_commands: []
-schema:
-  log_level: list(trace|debug|info|notice|warning|error|fatal)?
-  ssh:
-    username: str
-    password: password
-    authorized_keys:
-      - str
-    sftp: bool
-    compatibility_mode: bool
-    allow_agent_forwarding: bool
-    allow_remote_port_forwarding: bool
-    allow_tcp_forwarding: bool
-  zsh: bool
-  share_sessions: bool
-  packages:
-    - str
-  init_commands:
-    - str
+{
+  "name": "Dokémon Server Test",
+  "version": "latest",
+  "slug": "dokemon_server_test",
+  "description": "Dokémon is a friendly GUI for managing Docker Containers.",
+  "url": "https://github.com/dokemon-ng/",
+  "arch": ["amd64", "armv7", "aarch64"],
+  "image": "javastraat/dokemon-server",
+  "startup": "application",
+  "boot": "auto",
+  "init": false,
+  "ports": {"9090/tcp": 9090},
+  "volumes": {"data": "/data", "docker_sock": "/var/run/docker.sock"},
+  "options": {},
+  "schema": {},
+  "host_network": true,
+  "stdin": true,
+  "docker_api": true,
+  "host_dbus": true
+}

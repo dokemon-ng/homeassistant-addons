@@ -21,7 +21,11 @@
     "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
   },
   "schema": {
-    "SERVER_URL": "str?",
-    "TOKEN": "str?"
+    "SERVER_URL": "str",
+    "TOKEN": "str"
   },
+  "environment": {
+    "SERVER_URL": "$SERVER_URL",
+    "TOKEN": ""
+  }
 }

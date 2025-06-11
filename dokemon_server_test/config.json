@@ -21,6 +21,6 @@
     "9090/tcp": "Dokémon Port"
   },
   "docker_api": true,
-  "host_network": true,
+
   "devices": [ "/var/run/docker.sock" ],
 } 

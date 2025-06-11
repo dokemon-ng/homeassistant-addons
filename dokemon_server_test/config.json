@@ -15,6 +15,9 @@
   "init": false,
   "udev": true,
   "host_network": true,
+  "ingress": true,
+  "ingress_port": 1337,
+  "ingress_stream": true,
   "ports": {
     "9090/tcp": 9090
   },

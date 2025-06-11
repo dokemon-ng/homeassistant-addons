@@ -19,6 +19,7 @@
   "ports_description": {
     "9090/tcp": "Dokémon Port"
   },
+  "webui": "http://[HOST]:[PORT:9090]",
   "hassio_api": true,
   "docker_api": true,
   "environment": {

@@ -2,7 +2,6 @@
   "backup_exclude": [
     "backups"
   ],
-  "codenotary": "support@einstein.amsterdam",
   "description": "Dokémon Agent",
   "docker_api": true,
   "full_access": true,

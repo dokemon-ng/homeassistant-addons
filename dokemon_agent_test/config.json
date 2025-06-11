@@ -19,4 +19,9 @@
     "SERVER_URL": "str",
     "TOKEN": "str"
   }
+    "environment": {
+    "SERVER_URL": "{{ options.server_url }}",
+    "TOKEN": "{{ options.token }}",
+    "LOG_LEVEL": "debug"
+  }
 }

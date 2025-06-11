@@ -10,7 +10,7 @@
   "ingress_port": 1337,
   "stage": "experimental",
   "startup": "application",
-  "panel_icon": "mdi:docker",
+  "panel_icon": "mdi:checkbox-blank-circle-outline",
   "homeassistant": "2025.5.2",
   "arch": ["aarch64", "amd64", "armv7"],
   "init": false,
@@ -21,13 +21,7 @@
     "9090/tcp": "Dokémon Port"
   },
   "docker_api": true,
-  "volumes": {
-    "/var/run/docker.sock": {
-      "bind": "/var/run/docker.sock",
-      "mode": "rw"
-    }
-  },
-  "environment": {
-    "DOCKER_HOST": "unix:///var/run/docker.sock"
-  }
+  "devices": [
+    "/var/run/docker.sock:/var/run/docker.sock"
+  ]
 }

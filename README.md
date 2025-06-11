@@ -7,7 +7,7 @@ This is a test dont use this in production dont use it yet
 
 ## About
 
-[![Add repository on my Home Assistant][repository-badge]][repository-url]
+[![Add repository to your Home Assistant][repository-badge]][repository-url]
 
 
 

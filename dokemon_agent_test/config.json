@@ -15,14 +15,14 @@
   },
   "options": {
     "server_url": "http://192.168.2.203:9090",
-    "token": "your-token-here"
+    "token": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
   },
   "schema": {
-    "server_url": "str?",
-    "token": "str?"
+    "SERVER_URL": "str?",
+    "TOKEN": "str?"
   },
   "environment": {
-    "SERVER_URL": "http://192.168.2.203:9090",
-    "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
+    "SERVER_URL": "URL",
+    "TOKEN": "TOKEN"
   }
 }

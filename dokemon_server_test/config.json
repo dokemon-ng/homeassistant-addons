@@ -20,7 +20,5 @@
   },
   "hassio_api": true,
   "docker_api": true,
-  "environment": {
-    "DOCKER_HOST": "unix:///var/run/docker.sock"
-  }
+
 }

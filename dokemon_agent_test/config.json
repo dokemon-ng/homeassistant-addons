@@ -21,7 +21,7 @@
   "hassio_role": "manager",
   "privileged": [
     "SYS_ADMIN",
-    "SYS_RAWIO"
+    "NET_ADMIN"
   ],
   "maps": [
     "/var/run/docker.sock:/var/run/docker.sock:ro"

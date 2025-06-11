@@ -8,10 +8,12 @@
   "advanced": true,
   "stage": "experimental",
   "startup": "application",
+  "panel_admin": true,
   "panel_icon": "mdi:checkbox-blank-circle-outline",
   "homeassistant": "2025.5.2",
   "arch": ["aarch64", "amd64", "armv7"],
   "init": false,
+  "udev": true,
   "host_network": true,
   "ports": {
     "9090/tcp": 9090

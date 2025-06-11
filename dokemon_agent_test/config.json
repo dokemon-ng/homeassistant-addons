@@ -18,7 +18,5 @@
     "enabled": "bool",
     "SERVER_URL": "str",
     "TOKEN": "str"
-  },
-  "arch": ["armv7", "amd64", "arm64"],
-  "boot": "auto"
+  }
 }

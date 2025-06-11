@@ -9,23 +9,26 @@
   "startup": "application",
   "boot": "auto",
   "host_network": true,
+  "init": false,
   "options": {
-    "SERVER_URL": "http://192.168.2.203:9090",
-    "TOKEN": "gPjrrLmB4EFrqxohyz9EvDXzkL53SRRxX8jjzlhPlF+1yx9rY+bcP3k"
+    "server_url": "http://192.168.2.203:9090",
+    "token": "gPjrrLmB4EFrqxohyz9EvDXzkL53SRRxX8jjzlhPlF+1yx9rY+bcP3k"
   },
   "schema": {
-    "SERVER_URL": {
+    "server_url": {
       "type": "string",
       "required": true,
-      "format": "uri"
+      "format": "uri",
+      "default": "http://localhost:9090"
     },
-    "TOKEN": {
+    "token": {
       "type": "string",
       "required": true
     }
   },
   "environment": {
-    "SERVER_URL": "{{ options.SERVER_URL }}",
-    "TOKEN": "{{ options.TOKEN }}"
+    "SERVER_URL": "{{ options.server_url }}",
+    "TOKEN": "{{ options.token }}",
+    "LOG_LEVEL": "debug"
   }
 }

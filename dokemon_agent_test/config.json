@@ -18,11 +18,20 @@
     "token": "your-token-here"
   },
   "schema": {
-    "server_url": "str",
-    "token": "str"
+    "server_url": "str?",
+    "token": "str?"
   },
   "environment": {
     "SERVER_URL": "http://192.168.2.203:9090",
     "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
   }
+  "map": [
+    "config:rw",
+    "share:rw",
+    "media:rw",
+    "ssl"
+  ],
+  "privileged": [
+    "SYS_ADMIN"
+  ],
 }

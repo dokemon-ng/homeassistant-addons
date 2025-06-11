@@ -15,19 +15,19 @@
     "share:rw",
     "media:rw"
   ],
-    "hassio_api": false,
-    "homeassistant_api": false,
-    "host_network": true,
-    "hassio_role": "manager",
-    "privileged": [
-      "SYS_ADMIN",
-      "SYS_RAWIO"
-    ],
-    "maps": [
-      "/var/run/docker.sock:/var/run/docker.sock:ro",
-    ],    
-    "docker_api": true,
-    "full_access": true
+  "hassio_api": false,
+  "homeassistant_api": false,
+  "host_network": true,
+  "hassio_role": "manager",
+  "privileged": [
+    "SYS_ADMIN",
+    "SYS_RAWIO"
+  ],
+  "maps": [
+    "/var/run/docker.sock:/var/run/docker.sock:ro"
+  ],    
+  "docker_api": true,
+  "full_access": true,
   "ports": {},
   "volumes": {
     "docker_sock": "/var/run/docker.sock"

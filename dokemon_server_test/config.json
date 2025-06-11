@@ -20,13 +20,5 @@
     "9090/tcp": "Dokémon Port"
   },
   "hassio_api": true,
-  "docker_api": true,
-  "volumes": {
-    "/var/run/docker.sock": {
-      "bind": "/var/run/docker.sock",
-      "mode": "rw"
-    }
-  },
-  "privileged": true,
-  "full_access": true
+  "docker_api": true
 }

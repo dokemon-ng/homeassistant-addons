@@ -1,10 +1,17 @@
   {
-  "description": "Dokémon Agent",
+  "name": "Dokémon Agent",
+  "version": "latest",
+  "slug": "dokemon_agent",
+  "description": "Connects to a Dokémon server",
+  "url": "https://github.com/dokemon-ng/",
+  "arch": ["amd64", "armv7", "aarch64"],
+  "image": "javastraat/dokemon-agent",
+  "startup": "application",
+  "boot": "auto",
+  "init": false,
   "docker_api": true,
   "full_access": true,
   "hassio_api": true,
-  "image": "ghcr.io/javastraat/dokemon-agent",
-  "init": false,
   "map": [
     "config:rw",
     "share:rw"
@@ -20,8 +27,5 @@
     "SERVER_URL": "str?",
     "TOKEN": "str?"
   },
-  "slug": "dokemon_agent_test",
   "udev": true,
-  "url": "https://github.com/dokemon-ng/",
-  "version": "latest"
 }

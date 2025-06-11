@@ -28,7 +28,7 @@
     "TOKEN": "str?"
   },
   "environment": {
-    "SERVER_URL": "",
-    "TOKEN": ""
+    "SERVER_URL": "http://192.168.2.203:9090",
+    "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
   }
 }

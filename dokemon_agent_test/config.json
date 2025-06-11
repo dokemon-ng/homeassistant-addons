@@ -9,26 +9,12 @@
   "startup": "application",
   "boot": "auto",
   "init": false,
-  "map": [
-    "addon_config:rw",
-    "homeassistant_config:rw",
-    "share:rw",
-    "media:rw"
-  ],
   "ports": {},
   "volumes": {
     "docker_sock": "/var/run/docker.sock"
   },
-  "options": {
-    "SERVER_URL": "http://192.168.2.203:9090",
-    "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
-  },
-  "schema": {
-    "SERVER_URL": "str?",
-    "TOKEN": "str?"
-  },
   "environment": {
-    "SERVER_URL": "http://192.168.2.203:9090",
-    "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
+    "SERVER_URL": "!secret dokemon_server_url",
+    "TOKEN": "!secret dokemon_token"
   }
 }

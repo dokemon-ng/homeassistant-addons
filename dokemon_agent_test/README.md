@@ -1,129 +1,115 @@
-# Home Assistant Community Add-on: Advanced SSH & Web Terminal
+# homeassistant-addons
 
-[![Release][release-shield]][release] ![Project Stage][project-stage-shield] ![Project Maintenance][maintenance-shield]
+This is a test dont use this in production dont use it yet
 
-[![Discord][discord-shield]][discord] [![Community Forum][forum-shield]][forum]
+![Supports arm64 Architecture][arm64-shield] ![Supports amd64 Architecture][amd64-shield] ![Supports armv7 Architecture][armv7-shield]
 
-[![Sponsor Frenck via GitHub Sponsors][github-sponsors-shield]][github-sponsors]
-
-[![Support Frenck on Patreon][patreon-shield]][patreon]
-
-This add-on allows you to log in to your Home Assistant instance using
-SSH or by using the Web Terminal.
 
 ## About
 
-This add-on allows you to log in to your Home Assistant instance using
-SSH or a Web Terminal, giving you to access your folders and
-also includes a command-line tool to do things like restart, update,
-and check your instance.
+[![Add repository to your Home Assistant][repository-badge]][repository-url]
 
-This is an enhanced version of the provided
-[SSH add-on by Home Assistant][hass-ssh] and focuses on security,
-usability, flexibility and also provides access using a web interface.
 
-![Web Terminal in the Home Assistant Frontend][screenshot]
 
-## WARNING
+[arm64-shield]: https://img.shields.io/badge/arm64-yes-green.svg
+[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
+[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
+[repository-badge]: https://img.shields.io/badge/Add%20repository%20to%20my-Home%20Assistant-41BDF5?logo=home-assistant&style=for-the-badge
+[repository-url]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fdokemon-ng%2Fhomeassistant-addons
+[mit]: https://img.shields.io/badge/MIT-green?style=for-the-badge
 
-The advanced SSH & Web Terminal add-on is a really powerful and gives you
-virtually access to all tools and almost all hardware of your system.
+<div align="center">
+  <img src="https://raw.githubusercontent.com/dokemon-ng/.github/refs/heads/main/dokemon-logo.png" width="500" alt="Dokémon Logo">
+</div>
+Dokémon is a friendly GUI for managing Docker Containers. You can manage multiple servers from a single Dokemon instance.
 
-While this add-on is created and maintained with care and with security in mind,
-in the wrong or inexperienced hands, it could damage your system.
+Check https://dokemon.einstein.amsterdam (old: https://dokemon.dev) for more details.
 
-## Features
+## Quickstart
 
-This add-on, of course, provides an SSH server, based on [OpenSSH][openssh] and
-a web-based Terminal (which can be included in your Home Assistant frontend) as
-well. Additionally, it comes out of the box with the following:
+You can run the below commands to quickly try out Dokémon.
 
-- Access your command line right from the Home Assistant frontend!
-- A secure default configuration of SSH:
-  - Only allows login by the configured user, even if more users are created.
-  - Only uses known secure ciphers and algorithms.
-  - Limits login attempts to hold off brute-force attacks better.
-  - Many more security tweaks, _this addon passes all [ssh-audit] checks
-    without warnings!_
-    ![Result of SSH-Audit][ssh-audit-image]
-- Comes with an SSH compatibility mode option to allow older clients to connect.
-- Support for Mosh allowing roaming and supports intermittent connectivity.
-- SFTP support is disabled by default but is user configurable.
-- Compatible if Home Assistant was installed via the generic Linux installer.
-- Username is configurable, so `root` is no longer mandatory.
-- Persists custom SSH client settings & keys between add-on restarts
-- Log levels for allowing you to triage issues easier.
-- Hardware access to your audio, uart/serial devices and GPIO pins.
-- Runs with more privileges, allowing you to debug and test more situations.
-- Has access to the dbus of the host system.
-- Has the option to access the Docker instance running on the host system.
-- Runs on host level network, allowing you to open ports or run little daemons.
-- Have custom Alpine packages installed on start. This allows you to install
-  your favorite tools, which will be available every single time you log in.
-- Execute custom commands on add-on start so that you can customize the
-  shell to your likings.
-- [ZSH][zsh] as its default shell. Easier to use for the beginner, more advanced
-  for the more experienced user. It even comes preloaded with
-  ["Oh My ZSH"][ohmyzsh], with some plugins enabled as well.
-- Contains a sensible set of tools right out of the box: curl, Wget, RSync, GIT,
-  Nmap, Mosquitto client, MariaDB/MySQL client, Awake (“wake on LAN”), Nano,
-  Vim, tmux, and a bunch commonly used networking tools.
+**Note:** Whenever possible, it is recommended that you run Dokémon in a private network and do not expose it to the Internet. In cases where this is not possible, for example when running on a VPS to which you only have public access, you should run Dokémon behind an SSL enabled reverse proxy and use a strong password for maximum security. Refer the next section for sample configuration using Traefik.
 
-{% if channel == "edge" %}
-## WARNING! THIS IS AN EDGE VERSION!
+    # Create directory to store Dokemon data
+    sudo mkdir /dokemondata
 
-This Home Assistant Add-ons repository contains edge builds of add-ons.
-Edge builds add-ons are based upon the latest development version.
+    # Run Dokemon
+    sudo docker run -p 9090:9090 \
+      -v /dokemondata:/data \
+      -v /var/run/docker.sock:/var/run/docker.sock \
+      --restart unless-stopped \
+      --name dokemon-server -d javastraat/dokemon-server:latest
 
-- They may not work at all.
-- They might stop working at any time.
-- They could have a negative impact on your system.
+## Using Traefik with LetsEncrypt SSL certificate
 
-This repository was created for:
+This is an example configuration for running Dokémon behind Traefik with LetsEncrypt SSL certificate.
 
-- Anybody willing to test.
-- Anybody interested in trying out upcoming add-ons or add-on features.
-- Developers.
+**Note:** This is a sample configuration. Please modify it as per your requirements.
 
-If you are more interested in stable releases of our add-ons:
+    services:
+      traefik:
+        image: "traefik:v2.10"
+        container_name: "traefik"
+        command:
+          - "--log.level=DEBUG"
+          - "--accesslog=true"
+          - "--api.insecure=true"
+          - "--providers.docker=true"
+          - "--providers.docker.exposedbydefault=false"
+          - "--entrypoints.websecure.address=:443"
+          - "--certificatesresolvers.dokemon.acme.tlschallenge=true"
+          - "--certificatesresolvers.dokemon.acme.email=your.email@example.com"
+          - "--certificatesresolvers.dokemon.acme.storage=/letsencrypt/dokemon.json"
+        ports:
+          - "443:443"
+          - "8080:8080"
+        volumes:
+          - "./letsencrypt:/letsencrypt"
+          - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
-<https://github.com/hassio-addons/repository>
+      dokemon:
+        image: javastraat/dokemon-server:latest
+        container_name: dokemon-server
+        restart: unless-stopped
+        labels:
+          - "traefik.enable=true"
+          - "traefik.http.routers.dokemon.rule=Host(`dokemon.example.com`)"
+          - "traefik.http.routers.dokemon.entrypoints=websecure"
+          - "traefik.http.routers.dokemon.tls.certresolver=dokemon"
+        ports:
+          - 9090:9090
+        volumes:
+          - /dokemondata:/data
+          - /var/run/docker.sock:/var/run/docker.sock
 
-{% endif %}
-{% if channel == "beta" %}
-## WARNING! THIS IS A BETA VERSION!
+In the DNS settings for your domain, add an A record for the _Host_ which you have mentioned in the above config. The A record should point to the public IP address of your virtual machine.
 
-This Home Assistant Add-ons repository contains beta releases of add-ons.
+1. Create a file named `compose.yaml` on your server. Copy and paste the above YAML definition into the file. Modify the email and host. Make any other changes as per your requirements.
+2. Create .env file in root directory, take .env-example has example and define your own value
+3. Run `mkdir ./letsencrypt && mkdir /dokemondata`
+4. Run `docker compose up -d`
 
-- They might stop working at any time.
-- They could have a negative impact on your system.
+Open https://dokemon.example.com (substitute your URL here which you entered as Host in the compose.yaml file) in the browser. It can take a few seconds for the SSL certificate to be provisioned. If you get an error related to SSL, please wait for a few moments and then refresh your browser.
 
-This repository was created for:
+## Screenshots
 
-- Anybody willing to test.
-- Anybody interested in trying out upcoming add-ons or add-on features.
+### Manage Multiple Servers
+![Alt text](https://github.com/dokemon-ng/dokemon/raw/main/screenshots/screenshot-dokemon-nodes.jpg?raw=true)
 
-If you are more interested in stable releases of our add-ons:
+### Manage Variables for Different Environments
 
-<https://github.com/hassio-addons/repository>
+![Alt text](https://github.com/dokemon-ng/dokemon/raw/main/screenshots/screenshot-dokemon-variables.jpg?raw=true)
 
-{% endif %}
-[discord-shield]: https://img.shields.io/discord/478094546522079232.svg
-[discord]: https://discord.me/hassioaddons
-[forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io/t/community-hass-io-add-on-ssh-web-terminal/33820?u=frenck
-[github-sponsors-shield]: https://frenck.dev/wp-content/uploads/2019/12/github_sponsor.png
-[github-sponsors]: https://github.com/sponsors/frenck
-[hass-ssh]: https://home-assistant.io/addons/ssh/
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2025.svg
-[ohmyzsh]: http://ohmyz.sh/
-[openssh]: https://www.openssh.com/
-[patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
-[patreon]: https://www.patreon.com/frenck
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
-[release-shield]: https://img.shields.io/badge/version-{{ version }}-blue.svg
-[release]: {{ repo }}/tree/{{ version }}
-[screenshot]: {{ repo }}/raw/main/images/screenshot.png
-[ssh-audit-image]: https://github.com/hassio-addons/addon-ssh/raw/main/images/ssh-audit.png
-[ssh-audit]: https://github.com/jtesta/ssh-audit
-[zsh]: https://en.wikipedia.org/wiki/Z_shell
+### Deploy Compose Projects
+
+![Alt text](https://github.com/dokemon-ng/dokemon/raw/main/screenshots/screenshot-dokemon-compose-up.jpg?raw=true)
+
+### Manage Containers, Images, Volumes, Networks
+
+![Alt text](https://github.com/dokemon-ng/dokemon/raw/main/screenshots/screenshot-dokemon-containers.jpg?raw=true)
+
+## License
+
+This project is [MIT Licensed](LICENSE).
+

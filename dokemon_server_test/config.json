@@ -12,6 +12,7 @@
   "startup": "application",
   "panel_icon": "mdi:docker",
   "homeassistant": "2025.5.2",
+  "arch": ["aarch64", "amd64", "armv7"],
   "init": false,
   "ports": {
     "9090/tcp": 9090
@@ -19,7 +20,7 @@
   "ports_description": {
     "9090/tcp": "Dokémon Port"
   },
-
+  
   "docker_api": true,
   "volumes": {
     "/var/run/docker.sock": {

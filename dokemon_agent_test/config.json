@@ -1,7 +1,4 @@
   {
-  "backup_exclude": [
-    "backups"
-  ],
   "description": "Dokémon Agent",
   "docker_api": true,
   "full_access": true,

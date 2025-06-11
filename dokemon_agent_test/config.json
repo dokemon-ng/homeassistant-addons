@@ -14,7 +14,7 @@
     "docker_sock": "/var/run/docker.sock"
   },
   "options": {
-    "server_url": "http://localhost:9090/",
+    "server_url": "http://192.168.2.203:9090",
     "token": "your-token-here"
   },
   "schema": {
@@ -22,7 +22,7 @@
     "token": "str"
   },
   "environment": {
-    "SERVER_URL": "{{ options.server_url }}",
-    "TOKEN": "{{ options.token }}"
+    "SERVER_URL": "$server_url",
+    "TOKEN": "$token"
   }
 }

@@ -27,7 +27,5 @@
       "bind": "/var/run/docker.sock",
       "mode": "rw"
     }
-  },
-  "privileged": true,
-  "full_access": true
+  }
 }

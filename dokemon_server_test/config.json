@@ -22,10 +22,5 @@
   },
   "docker_api": true,
   "host_network": true,
-  "volumes": {
-    "/var/run/docker.sock": {
-      "bind": "/var/run/docker.sock",
-      "mode": "rw"
-    }
-  }
-}
+  "devices": [ "/var/run/docker.sock" ],
+} 

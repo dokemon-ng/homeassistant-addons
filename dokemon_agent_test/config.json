@@ -13,6 +13,5 @@
   "schema": {
     "SERVER_URL": "str?",
     "TOKEN": "str?"
-  },
-  "udev": true,
+  }
 }

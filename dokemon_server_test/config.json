@@ -6,8 +6,6 @@
   "url": "https://github.com/dokemon-ng/",
   "image": "javastraat/dokemon-server",
   "advanced": true,
-  "ingress": true,
-  "ingress_port": 1337,
   "stage": "experimental",
   "startup": "application",
   "panel_icon": "mdi:docker",

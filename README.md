@@ -4,10 +4,19 @@ This is a test dont use this in production dont use it yet
 
 ![Supports arm64 Architecture][arm64-shield] ![Supports amd64 Architecture][amd64-shield] ![Supports armv7 Architecture][armv7-shield]
 
-![MIT License][mit]
+
 ## About
 
 [![Add repository on my Home Assistant][repository-badge]][repository-url]
+
+
+
+## Thanks to all contributors ❤
+
+ <a href = "https://github.com/dokemon-ng/dokemon-README.md-Profile/graphs/contributors">
+   <img src = "https://contrib.rocks/image?repo=dokemon-ng/dokemon-README.md-Profile"/>
+ </a>
+ 
 
 [arm64-shield]: https://img.shields.io/badge/arm64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg

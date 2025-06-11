@@ -25,7 +25,7 @@
     "TOKEN": "str"
   },
   "environment": {
-    "SERVER_URL": "SERVER_URL",
-    "TOKEN": "TOKEN"
+    "SERVER_URL": "",
+    "TOKEN": ""
   }
 }

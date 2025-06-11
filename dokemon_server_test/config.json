@@ -22,7 +22,7 @@
   },
   "hassio_api": true,
   "docker_api": true,
-   "volumes": {
+  "volumes": {
     "/var/run/docker.sock": {
       "bind": "/var/run/docker.sock",
       "mode": "rw"

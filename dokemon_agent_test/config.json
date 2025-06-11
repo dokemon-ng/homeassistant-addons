@@ -9,26 +9,13 @@
   "startup": "application",
   "boot": "auto",
   "init": false,
-  "host_network": true,
   "ports": {},
   "options": {
-    "SERVER_URL": "http://192.168.2.203:9090",
-    "TOKEN": "gPjrrLmB4EFrqxohyz9EvDXzkL53SRRxX8jjzlhPlF+1yx9rY+bcP3k"
+    "SERVER_URL": "http://your-dokemon-server-ip:9090",
+    "TOKEN": "your-agent-token-here"
   },
   "schema": {
-    "SERVER_URL": {
-      "type": "string",
-      "required": true,
-      "format": "uri"
-    },
-    "TOKEN": {
-      "type": "string",
-      "required": true
-    }
-  },
-  "environment": {
-    "SERVER_URL": "{{ SERVER_URL }}",
-    "TOKEN": "{{ TOKEN }}",
-    "LOG_LEVEL": "debug"
+    "SERVER_URL": "str",
+    "TOKEN": "str"
   }
 }

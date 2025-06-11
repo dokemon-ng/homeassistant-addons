@@ -1,4 +1,4 @@
- {
+{
   "name": "Dokémon Server Test",
   "version": "latest",
   "slug": "dokemon_server_test",
@@ -20,10 +20,14 @@
   "ports_description": {
     "9090/tcp": "Dokémon Port"
   },
+  "hassio_api": true,
   "docker_api": true,
-  "host_network": true,
-  "devices": [ "/var/run/docker.sock" ],
-  "privileged": [
-    "SYS_ADMIN"
-  ]
-} 
+  "volumes": {
+    "/var/run/docker.sock": {
+      "bind": "/var/run/docker.sock",
+      "mode": "rw"
+    }
+  },
+  "privileged": true,
+  "full_access": true
+}

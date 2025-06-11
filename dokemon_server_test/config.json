@@ -27,7 +27,6 @@
       "mode": "rw"
     }
   },
-  "privileged": true,
   "environment": {
     "DOCKER_HOST": "unix:///var/run/docker.sock"
   }

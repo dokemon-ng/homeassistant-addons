@@ -25,13 +25,10 @@
     "SERVER_URL": "http://192.168.2.203:9090",
     "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
   }
-  "map": [
-    "config:rw",
-    "share:rw",
-    "media:rw",
-    "ssl"
-  ],
-  "privileged": [
+  "map": {
+    "config:rw"
+  },
+  "privileged": {
     "SYS_ADMIN"
-  ],
+  },
 }

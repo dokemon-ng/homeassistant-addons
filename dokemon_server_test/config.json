@@ -20,7 +20,6 @@
   "ports_description": {
     "9090/tcp": "Dokémon Port"
   },
-  "hassio_api": true,
   "docker_api": true,
   "volumes": {
     "/var/run/docker.sock": {
@@ -29,8 +28,6 @@
     }
   },
   "privileged": true,
-  "apparmor": false,
-  "full_access": true,
   "environment": {
     "DOCKER_HOST": "unix:///var/run/docker.sock"
   }

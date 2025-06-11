@@ -11,13 +11,6 @@ This is a test dont use this in production dont use it yet
 
 
 
-## Thanks to all contributors ❤
-
- <a href = "https://github.com/dokemon-ng/dokemon-README.md-Profile/graphs/contributors">
-   <img src = "https://contrib.rocks/image?repo=dokemon-ng/dokemon-README.md-Profile"/>
- </a>
- 
-
 [arm64-shield]: https://img.shields.io/badge/arm64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg

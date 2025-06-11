@@ -1,4 +1,4 @@
-{
+ {
   "name": "Dokémon Agent Test",
   "version": "latest",
   "slug": "dokemon_agent_test",
@@ -9,22 +9,14 @@
   "startup": "application",
   "boot": "auto",
   "host_network": true,
-  "init": false,
-  "schema": {
-    "server_url": {
-      "type": "string",
-      "required": true,
-      "format": "uri",
-      "default": "http://localhost:9090"
-    },
-    "token": {
-      "type": "string",
-      "required": true
-    }
+  "options": {
+    "enabled": true,
+    "SERVER_URL": "http://your-dokemon-server-ip:9090",
+    "TOKEN": "your-agent-token-here"
   },
-  "environment": {
-    "SERVER_URL": "{{ options.server_url }}",
-    "TOKEN": "{{ options.token }}",
-    "LOG_LEVEL": "debug"
+  "schema": {
+    "enabled": "bool",
+    "SERVER_URL": "str",
+    "TOKEN": "str"
   }
 }

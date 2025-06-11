@@ -15,12 +15,6 @@
     "share:rw",
     "media:rw"
   ],
-    "options": {
-      "SERVER_URL": ""
-    },
-    "schema": {
-      "SERVER_URL": "str?"
-    },
     "hassio_api": false,
     "homeassistant_api": false,
     "host_network": true,
@@ -31,13 +25,24 @@
     ],
     "maps": [
       "/var/run/docker.sock:/var/run/docker.sock:ro",
-    "addon_config:rw",
-    "homeassistant_config:rw",
-    "share:rw",
-    "config:rw"
     ],    
     "docker_api": true,
     "full_access": true
-
+  "ports": {},
+  "volumes": {
+    "docker_sock": "/var/run/docker.sock"
+  },
+  "options": {
+    "SERVER_URL": "http://192.168.2.203:9090",
+    "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
+  },
+  "schema": {
+    "SERVER_URL": "str?",
+    "TOKEN": "str?"
+  },
+  "environment": {
+    "SERVER_URL": "http://192.168.2.203:9090",
+    "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
+  }
 
 }

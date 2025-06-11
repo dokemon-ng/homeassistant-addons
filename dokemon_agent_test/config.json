@@ -10,10 +10,6 @@
   "boot": "auto",
   "host_network": true,
   "init": false,
-  "options": {
-    "server_url": "http://192.168.2.203:9090",
-    "token": "gPjrrLmB4EFrqxohyz9EvDXzkL53SRRxX8jjzlhPlF+1yx9rY+bcP3k"
-  },
   "schema": {
     "server_url": {
       "type": "string",

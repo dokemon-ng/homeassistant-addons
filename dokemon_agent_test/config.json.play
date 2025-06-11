@@ -1,0 +1,34 @@
+{
+  "name": "Dokémon Agent Test",
+  "version": "latest",
+  "slug": "dokemon_agent_test",
+  "description": "Connects to a Dokémon server",
+  "url": "https://github.com/dokemon-ng/",
+  "arch": ["amd64", "armv7", "aarch64"],
+  "image": "javastraat/dokemon-agent",
+  "startup": "application",
+  "boot": "auto",
+  "init": false,
+  "map": [
+    "addon_config:rw",
+    "homeassistant_config:rw",
+    "share:rw",
+    "media:rw"
+  ],
+  "ports": {},
+  "volumes": {
+    "docker_sock": "/var/run/docker.sock"
+  },
+  "options": {
+    "SERVER_URL": "http://192.168.2.203:9090",
+    "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
+  },
+  "schema": {
+    "SERVER_URL": "str?",
+    "TOKEN": "str?"
+  },
+  "environment": {
+    "SERVER_URL": "http://192.168.2.203:9090",
+    "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
+  }
+}

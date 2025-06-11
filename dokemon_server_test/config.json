@@ -1,5 +1,4 @@
 {
-{
   "name": "Dokémon Server Test",
   "version": "latest",
   "slug": "dokemon_server_test",
@@ -11,14 +10,17 @@
   "startup": "application",
   "panel_icon": "mdi:docker",
   "homeassistant": "2025.5.2",
+  "arch": ["aarch64", "amd64", "armv7"],
   "init": false,
   "ports": {
     "9090/tcp": 9090
   },
   "ports_description": {
-    "9090/tcp": "Dokémon Web Interface"
+    "9090/tcp": "Dokémon Port"
   },
   "hassio_api": true,
   "docker_api": true,
-
+  "environment": {
+    "DOCKER_HOST": "unix:///var/run/docker.sock"
+  }
 }

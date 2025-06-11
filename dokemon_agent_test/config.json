@@ -10,6 +10,7 @@
   "boot": "auto",
   "init": false,
   "ports": {},
+  "host_network": true,
   "options": {
     "SERVER_URL": "http://your-dokemon-server-ip:9090",
     "TOKEN": "your-agent-token-here"

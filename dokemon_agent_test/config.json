@@ -6,7 +6,7 @@
   "docker_api": true,
   "full_access": true,
   "hassio_api": true,
-  "image": "ghcr.io/alexbelgium/portainer_agent-{arch}avastraat/dokemon-agent",
+  "image": "ghcr.io/javastraat/dokemon-agent",
   "init": false,
   "map": [
     "config:rw",

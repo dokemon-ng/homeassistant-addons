@@ -20,8 +20,8 @@
   "ports_description": {
     "9090/tcp": "Dokémon Port"
   },
-  
   "docker_api": true,
+  "host_network": true,
   "volumes": {
     "/var/run/docker.sock": {
       "bind": "/var/run/docker.sock",

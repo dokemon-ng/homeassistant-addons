@@ -1,4 +1,5 @@
 {
+{
   "name": "Dokémon Server Test",
   "version": "latest",
   "slug": "dokemon_server_test",
@@ -10,20 +11,21 @@
   "startup": "application",
   "panel_icon": "mdi:docker",
   "homeassistant": "2025.5.2",
-  "arch": ["aarch64", "amd64", "armv7"],
+  "arch": ["amd64", "armv7", "armhf"],
   "init": false,
   "ports": {
     "9090/tcp": 9090
   },
   "ports_description": {
-    "9090/tcp": "Dokémon Port"
+    "9090/tcp": "Dokémon Web Interface"
   },
   "hassio_api": true,
   "docker_api": true,
-  "volumes": {
-    "/var/run/docker.sock": {
-      "bind": "/var/run/docker.sock",
-      "mode": "rw"
-    }
+  "privileged": true,
+  "full_access": true,
+  "ingress": true,
+  "ingress_port": 1337,
+  "environment": {
+    "DOCKER_HOST": "unix:///var/run/docker.sock"
   }
 }

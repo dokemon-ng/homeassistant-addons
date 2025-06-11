@@ -20,7 +20,6 @@
   "ports_description": {
     "9090/tcp": "Dokémon Port"
   },
-  "docker_api": true,
-
-  "devices": [ "/var/run/docker.sock" ],
-} 
+  "hassio_api": true,
+  "docker_api": true
+}

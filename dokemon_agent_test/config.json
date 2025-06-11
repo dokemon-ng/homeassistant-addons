@@ -22,7 +22,7 @@
     "token": "str"
   },
   "environment": {
-    "SERVER_URL": "{{ server_url }}",
-    "TOKEN": "{{ token }}"
+    "SERVER_URL": "http://192.168.2.203:9090",
+    "TOKEN": "sP42zJt5I/5+rItW49zS00GowdTs9T3lsdhKimHScye23H80gdyXg+w="
   }
 }

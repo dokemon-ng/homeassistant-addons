@@ -14,8 +14,4 @@
     "SERVER_URL": "str?",
     "TOKEN": "str?"
   }
-  "environment": {
-    "SERVER_URL": "$server_url",
-    "TOKEN": "$token"
-  }
 }

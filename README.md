@@ -2,7 +2,9 @@
 
 This is a test dont use this in production dont use it yet
 
-![Supports arm64 Architecture][arm64-shield] ![Supports amd64 Architecture][amd64-shield] ![Supports armv7 Architecture][armv7-shield] ![MIT License][mit]
+![Supports arm64 Architecture][arm64-shield] ![Supports amd64 Architecture][amd64-shield] ![Supports armv7 Architecture][armv7-shield]
+
+![MIT License][mit]
 ## About
 
 [![Add repository on my Home Assistant][repository-badge]][repository-url]

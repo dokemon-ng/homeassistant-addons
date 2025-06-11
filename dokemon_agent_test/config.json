@@ -4,30 +4,34 @@
   "slug": "dokemon_agent_test",
   "description": "Connects to a Dokémon server",
   "url": "https://github.com/dokemon-ng/",
-  "arch": ["amd64", "armv7", "aarch64"],
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armv7"
+  ],
   "image": "javastraat/dokemon-agent",
   "startup": "application",
   "boot": "auto",
   "init": false,
-  "map": [
-    "addon_config:rw",
-    "homeassistant_config:rw",
-    "share:rw",
-    "media:rw"
-  ],
   "hassio_api": false,
   "homeassistant_api": false,
   "host_network": true,
   "hassio_role": "manager",
+  "docker_api": true,
+  "full_access": true,
   "privileged": [
-    "SYS_ADMIN",
-    "NET_ADMIN"
+    "NET_ADMIN",
+    "SYS_ADMIN"
+  ],
+  "map": [
+    "addon_config:rw",
+    "homeassistant_config:rw",
+    "media:rw",
+    "share:rw"
   ],
   "maps": [
     "/var/run/docker.sock:/var/run/docker.sock:ro"
-  ],    
-  "docker_api": true,
-  "full_access": true,
+  ],
   "ports": {},
   "volumes": {
     "docker_sock": "/var/run/docker.sock"
@@ -44,5 +48,4 @@
     "SERVER_URL": "http://192.168.2.203:9090",
     "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
   }
-
 }

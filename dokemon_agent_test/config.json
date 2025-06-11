@@ -1,4 +1,4 @@
-  {
+{
   "name": "Dokémon Agent Test",
   "version": "latest",
   "slug": "dokemon_agent_test",
@@ -9,20 +9,7 @@
   "startup": "application",
   "boot": "auto",
   "init": false,
-  "docker_api": true,
-  "full_access": true,
-  "hassio_api": true,
-  "map": [
-    "config:rw",
-    "share:rw"
-  ],
-  "name": "Dokémon Agent",
-  "ports": {
-    "9090/tcp": 9090
-  },
-  "ports_description": {
-    "9090/tcp": "Dokémon agent"
-  },
+  "ports": {},
   "schema": {
     "SERVER_URL": "str?",
     "TOKEN": "str?"

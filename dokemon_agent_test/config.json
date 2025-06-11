@@ -10,13 +10,22 @@
   "boot": "auto",
   "host_network": true,
   "options": {
-    "enabled": true,
-    "SERVER_URL": "http://your-dokemon-server-ip:9090",
-    "TOKEN": "your-agent-token-here"
+    "SERVER_URL": "http://192.168.2.203:9090",
+    "TOKEN": "gPjrrLmB4EFrqxohyz9EvDXzkL53SRRxX8jjzlhPlF+1yx9rY+bcP3k"
   },
   "schema": {
-    "enabled": "bool",
-    "SERVER_URL": "str",
-    "TOKEN": "str"
+    "SERVER_URL": {
+      "type": "string",
+      "required": true,
+      "format": "uri"
+    },
+    "TOKEN": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "environment": {
+    "SERVER_URL": "{{ options.SERVER_URL }}",
+    "TOKEN": "{{ options.TOKEN }}"
   }
 }

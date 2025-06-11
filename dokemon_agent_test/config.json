@@ -1,6 +1,6 @@
 {
   "name": "Dokémon Agent Test",
-  "version": "latest",More actions
+  "version": "latest",
   "slug": "dokemon_agent_test",
   "description": "Connects to a Dokémon server",
   "url": "https://github.com/dokemon-ng/",

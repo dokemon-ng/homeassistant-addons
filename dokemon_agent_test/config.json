@@ -8,14 +8,23 @@
   "image": "javastraat/dokemon-agent",
   "startup": "application",
   "boot": "auto",
-  "init": false,
-  "ports": {},
+  "host_network": true,
+  "ports": {
+    "9090/tcp": 9090
+  },
   "options": {
+    "enabled": true,
     "SERVER_URL": "http://your-dokemon-server-ip:9090",
-    "TOKEN": "your-agent-token-here"
+    "TOKEN": "your-agent-token-here",
   },
   "schema": {
+    "enabled": "bool",
     "SERVER_URL": "str",
-    "TOKEN": "str"
-  }
+    "TOKEN": "str",
+  },
+  "environment": {
+    "TZ": "Europe/Amsterdam"
+  },
+  "arch": ["armv7", "amd64", "arm64"],
+  "boot": "auto"
 }

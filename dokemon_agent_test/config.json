@@ -24,11 +24,13 @@
     "SYS_ADMIN"
   ],
   "map": [
-    "addon_config:rw",
-    "homeassistant_config:rw",
-    "media:rw",
-    "share:rw"
+   "config:rw",
+   "ssl:rw",
+   "addons:rw",
+   "backup:rw",
+   "share:rw"
   ],
+  
   "maps": [
     "/var/run/docker.sock:/var/run/docker.sock:ro"
   ],

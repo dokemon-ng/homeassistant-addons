@@ -1,13 +1,30 @@
-# Dockemon Agent
+# Dockemon Agent 🐳👾
 
-This is a test dont use this in production dont use it yet
-
-![Supports arm64 Architecture][arm64-shield] ![Supports amd64 Architecture][amd64-shield] ![Supports armv7 Architecture][armv7-shield]
-
-
+![Supports arm64 Architecture][arm64-shield] 
+![Supports amd64 Architecture][amd64-shield] 
+![Supports armv7 Architecture][armv7-shield]
+[![MIT License][mit]][mit-url]
 [![Add repository to your Home Assistant][repository-badge]][repository-url]
 
+<div align="center">
+  <img alt="Dockemon Logo" src="https://raw.githubusercontent.com/dokemon-ng/.github/main/dokemon-logo.png" width="500">
+  <p><em>Warning: This is currently in testing phase - not recommended for production use</em></p>
+</div>
 
+## About Dockemon
+
+Dockemon is a friendly GUI for managing Docker containers across multiple servers from a single interface. Designed with simplicity in mind, it provides an intuitive way to manage your containerized environments.
+
+## 🚧 Important Notice
+This agent is currently in **testing phase**. Please:
+- Do not use in production environments
+- Expect breaking changes
+- Report any issues you encounter
+
+## Supported Architectures
+- arm64
+- amd64
+- armv7
 
 [arm64-shield]: https://img.shields.io/badge/arm64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg

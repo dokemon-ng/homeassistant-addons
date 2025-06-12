@@ -16,12 +16,14 @@
   "hassio_api": true,
   "homeassistant_api": true,
   "host_network": true,
-  "host_docker": true,
   "full_access": true,
   "map": [
    "config:rw",
    "addons:rw"
   ],
+  "volumes": {
+  "/var/run/docker.sock": "/var/run/docker.sock"
+  },
   "ports": {},
   "options": {
     "SERVER_URL": "http://192.168.2.203:9090",

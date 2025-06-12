@@ -16,24 +16,12 @@
   "hassio_api": true,
   "homeassistant_api": true,
   "host_network": true,
-  "hassio_role": "manager",
-  "docker_api": true,
   "host_docker": true,
   "full_access": true,
-  "privileged": [
-    "NET_ADMIN",
-    "SYS_ADMIN"
-  ],
   "map": [
    "config:rw",
-   "ssl:rw",
-   "addons:rw",
-   "backup:rw",
-   "share:rw"
+   "addons:rw"
   ],
-  "volumes": {
-    "/var/run/docker.sock": "/var/run/docker.sock"
-  },
   "ports": {},
   "options": {
     "SERVER_URL": "http://192.168.2.203:9090",

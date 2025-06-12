@@ -13,7 +13,7 @@
   <p><em>Warning: This is currently in testing phase - not recommended for production use</em></p>
 </div>
 
-## About Dockemon
+## About Dokémon
 
 Dokémon is a friendly GUI for managing Docker containers across multiple servers from a single interface. Designed with simplicity in mind, it provides an intuitive way to manage your containerized environments.
 
@@ -21,7 +21,6 @@ Dokémon is a friendly GUI for managing Docker containers across multiple server
 This agent is currently in **testing phase**. Please:
 - Do not use in production environments
 - Expect breaking changes
-- Report any issues you encounter
 
 ## Supported Architectures
 - arm64

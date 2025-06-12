@@ -21,8 +21,9 @@
    "config:rw",
    "addons:rw"
   ],
-  "apparmor": false,
-  "devices": ["/var/run/docker.sock:/var/run/docker.sock:rwm"],
+  "volumes": {
+    "/var/run/docker.sock": "/mnt/data/docker/run/docker.sock"
+  },
   "ports": {},
   "options": {
     "SERVER_URL": "http://192.168.2.203:9090",

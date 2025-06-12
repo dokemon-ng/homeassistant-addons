@@ -17,7 +17,6 @@
   "homeassistant_api": true,
   "host_network": true,
   "full_access": true,
-  "privileged": true,
   "map": [
    "config:rw",
    "addons:rw"

@@ -1,4 +1,11 @@
 # homeassistant-addons
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dokemon-ng/.github/refs/heads/main/dokemon-logo.png" width="500">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dokemon-ng/.github/refs/heads/main/dokemon-logo-rect4.png" width="500">
+  <img alt="Dokémon (Dokemon) Logo" src="https://raw.githubusercontent.com/dokemon-ng/.github/refs/heads/main/dokemon-logo.png" width="500">
+</picture>
+</div>
 
 This is a test dont use this in production dont use it yet
 
@@ -18,9 +25,6 @@ This is a test dont use this in production dont use it yet
 [repository-url]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fdokemon-ng%2Fhomeassistant-addons
 [mit]: https://img.shields.io/badge/MIT-green?style=for-the-badge
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/dokemon-ng/.github/refs/heads/main/dokemon-logo.png" width="500" alt="Dokémon Logo">
-</div>
 Dokémon is a friendly GUI for managing Docker Containers. You can manage multiple servers from a single Dokemon instance.
 
 Check https://dokemon.einstein.amsterdam (old: https://dokemon.dev) for more details.

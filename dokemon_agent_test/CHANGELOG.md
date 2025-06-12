@@ -1,4 +1,4 @@
-# Dokémon Agent 🐳
+# Dokémon Next Generation Agent 🐳
 
 ![Supports arm64 Architecture][arm64-shield] 
 ![Supports amd64 Architecture][amd64-shield] 

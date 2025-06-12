@@ -1,4 +1,4 @@
-# Dokémon Addon 🐳
+# Dokémon Addon 🐳 ⭕
 
 ![Supports arm64 Architecture][arm64-shield] 
 ![Supports amd64 Architecture][amd64-shield] 

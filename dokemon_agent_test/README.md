@@ -3,7 +3,6 @@
 ![Supports arm64 Architecture][arm64-shield] 
 ![Supports amd64 Architecture][amd64-shield] 
 ![Supports armv7 Architecture][armv7-shield]
-
 [![MIT License][mit]][mit-url]
 
 [![Add repository to your Home Assistant][repository-badge]][repository-url]

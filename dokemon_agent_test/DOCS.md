@@ -1,4 +1,4 @@
-# Dockemon Agent 🐳👾
+# Dokémon Agent 🐳
 
 ![Supports arm64 Architecture][arm64-shield] 
 ![Supports amd64 Architecture][amd64-shield] 
@@ -15,19 +15,18 @@
 [mit-url]: https://opensource.org/licenses/MIT
 
 <div align="center">
-  <img alt="Dockemon Logo" src="https://raw.githubusercontent.com/dokemon-ng/.github/main/dokemon-logo.png" width="500">
+  <img alt="Dokémon Logo" src="https://raw.githubusercontent.com/dokemon-ng/.github/main/dokemon-logo.png" width="500">
   <p><em>Warning: This is currently in testing phase - not recommended for production use</em></p>
 </div>
 
-## About Dockemon
+## About Dokémon
 
-Dockemon is a friendly GUI for managing Docker containers across multiple servers from a single interface. Designed with simplicity in mind, it provides an intuitive way to manage your containerized environments.
+Dokémon is a friendly GUI for managing Docker containers across multiple servers from a single interface. Designed with simplicity in mind, it provides an intuitive way to manage your containerized environments.
 
 ## 🚧 Important Notice
 This agent is currently in **testing phase**. Please:
 - Do not use in production environments
 - Expect breaking changes
-- Report any issues you encounter
 
 ## Supported Architectures
 - arm64
@@ -39,6 +38,7 @@ This agent is currently in **testing phase**. Please:
 ### Prerequisites
 - Docker installed
 - Docker socket access
+- Dokémon Server (see below)
 
 ### Basic Installation
 ```bash

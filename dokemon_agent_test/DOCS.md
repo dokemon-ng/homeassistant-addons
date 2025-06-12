@@ -27,6 +27,25 @@ This agent is currently in **testing phase**. Please:
 - amd64
 - armv7
 
+## Quick Start Guide
+
+### Prerequisites
+- Docker installed
+- Docker socket access
+- Dokémon Server (see below)
+
+### Basic Installation
+```bash
+# Create data directory
+sudo mkdir /dokemondata
+
+# Run Dockemon container
+sudo docker run -p 9090:9090 \
+  -v /dokemondata:/data \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  --restart unless-stopped \
+  --name dokemon-server -d javastraat/dokemon-server:latest
+
 [arm64-shield]: https://img.shields.io/badge/arm64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg

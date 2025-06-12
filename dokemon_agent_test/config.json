@@ -18,6 +18,7 @@
   "host_network": true,
   "hassio_role": "manager",
   "docker_api": true,
+  "host_docker": true,
   "full_access": true,
   "privileged": [
     "NET_ADMIN",
@@ -31,9 +32,6 @@
    "share:rw"
   ],
   "ports": {},
-  "volumes": {
-    "docker_sock": "/var/run/docker.sock"
-  },
   "options": {
     "SERVER_URL": "http://192.168.2.203:9090",
     "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="

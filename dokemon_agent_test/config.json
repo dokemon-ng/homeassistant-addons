@@ -27,7 +27,7 @@
   "ports": {},
   "options": {
     "SERVER_URL": "http://192.168.2.203:9090",
-    "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
+    "TOKEN": "epqYaIV0W5C2IsjexhfmBBiAMNNOr5kWGWCuGN/m926WOIEOxUB4c3U="
   },
   "schema": {
     "SERVER_URL": "str?",
@@ -35,7 +35,7 @@
   },
   "environment": {
     "SERVER_URL": "http://192.168.2.203:9090",
-    "TOKEN": "wJCZ4nMZmgtTXLIYG8KdCA22qwy57ZpRMPge9hyKStqprnyVRVWSKBw="
+    "TOKEN": "epqYaIV0W5C2IsjexhfmBBiAMNNOr5kWGWCuGN/m926WOIEOxUB4c3U="
   },
   "command": "ls -l /var/run/docker.sock && docker ps || echo 'Docker socket not accessible'"
 }
